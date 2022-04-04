@@ -24,8 +24,7 @@ def prox_operator_ridge_regression(y, L, rho):
     
     return (1/(rho/L+1))*y
     
-    
-k= 1.0
+
 def proximal_grad_ridge(A,b,x,t,rho):
     y = np.zeros((4,1))
     L = linalg.norm((np.matmul(A.T,A))) 
@@ -40,7 +39,7 @@ def proximal_grad_ridge(A,b,x,t,rho):
         cost_current =  Problem2(x, A, b)
         k = k + 1
         diff = abs(cost_old - cost_current)
-        return x
+     return x
     
     
 
